@@ -1,0 +1,246 @@
+@font-face {
+    font-family: "richard";
+    src: url("./fonts/PoorRichardOpti.otf");
+}
+
+html{
+    font-family: "richard", serif;
+}
+
+.container{
+    width: 100vw;
+    height: 90vh;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.step{
+    width: 50%;
+    height: 60%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+#step4{
+    width: 75%;
+    height: 100%;
+    flex-direction: row;
+    margin: auto;
+}
+
+#bestfit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+
+#bestfit>h1{
+    font-size: xx-large;
+}
+
+#bestfit h4{
+    font-size: x-large;
+}
+
+.flex-row{
+    flex-direction: row !important;
+    align-items: flex-end;
+}
+
+.subcontainer:nth-child(1){
+    flex-basis: 60%;
+}
+.subcontainer:nth-child(2){
+    flex-basis: 40%;
+}
+
+.scrollbar{
+    max-height: 60vh;
+    overflow-y: scroll;
+    direction: rtl;
+}
+
+.scrollbar::-webkit-scrollbar{
+    width: 15px
+}
+
+.scrollbar::-webkit-scrollbar-track{
+    background: #fff;
+    border-left: 5px solid #ddd;
+    border-right: 5px solid #ddd;
+}
+
+.scrollbar::-webkit-scrollbar-thumb{
+    background: black;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    border-radius: 20px;
+}
+
+#content{
+    direction: ltr;
+}
+.step > div{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.input{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #000;
+    background-color: #ddd;
+}
+
+.characteristics{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3vh 0 0 0;
+}
+
+.buttons{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.btn{
+    border:1px solid #000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 25px;
+    min-width: 5vw;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    transition: 250ms;
+}
+
+.btn-skip{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 1vh;
+    font-size: large;
+}
+
+.btn-skip:hover{
+    font-size: x-large;
+    transition: 150ms ease-in-out;
+    background-color: transparent;
+    color: #000;
+}
+
+.btn-active{
+    background-color: #000;
+    color: #fff;
+}
+
+#buttons-best-fit{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.other-dogs{
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-div{
+    width: 50%;
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh;
+    text-align: center;
+    display: none;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.footer > p{
+    font-size: xx-large;
+}
+
+
+#modal{
+    display:none;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    position: fixed; 
+    background-color: rgba(0,0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+#modal-content{
+    background-color: #fff;
+    width: 25%;
+    position: relative;
+    margin: 20vh auto;
+    padding: 20px;
+    border-radius: 20px;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+#modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+#modal-header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.modal-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#modal-close:focus,
+#modal-close:hover{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}

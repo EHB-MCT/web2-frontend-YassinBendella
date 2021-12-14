@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/141b038b83.js" crossorigin="anonymous"></script>
+    <title>DAGGOE</title>
+</head>
+<body>
+    <div id="modal">
+        <div id="modal-content">
+            <div id="modal-header">
+                <span id="modal-close">&times;</span>
+            </div>
+            <div class="modal-flex">
+                <div id="modal-body">
+    
+                </div>
+                <button class="btn"><i class="fas fa-save"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="main" class="container">
+        <div id="step1" class="step">
+            <div>
+                <p>Welke grootte hond verkiest u ?</p>
+                <div class="buttons">
+                    <button class="btn btn-element">Small</button>
+                    <button class="btn btn-element">Medium</button>
+                    <button class="btn btn-element">Large</button>
+                </div>
+            </div>
+            <button class="btn-skip">
+                skip
+            </button>
+        </div>
+        <div id="step2" class="step">
+            <div>
+                <p>Wat voor eerste eigenschap heeft uw hond ?</p>
+                <div class="characteristics">
+                    <div>
+                        <input class="input" type="text" placeholder="search for characteristique">
+                    </div>
+                    <div class="buttons w-100">
+                        <button class="btn btn-element">Playful</button>
+                        <button class="btn btn-element">Brave</button>
+                        <button class="btn btn-element">Loyal</button>
+                    </div>
+                    <div class="buttons w-100">
+                        <button class="btn btn-element">Leader</button>
+                        <button class="btn btn-element">Courageous</button>
+                        <button class="btn btn-element">Selfish</button>
+                    </div>
+                    <div class="buttons w-100">
+                        <button class="btn btn-element">Friendly</button>
+                        <button class="btn btn-element">Affectionate</button>
+                        <button class="btn btn-element">Jealousy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-previous">
+                    <i class="fas fa-undo"></i>
+                </button>
+                <button class="btn-skip">
+                    skip
+                </button>
+            </div>
+        </div>
+        <div id="step3" class="step">
+            <div>
+                <p>Wat voor tweede eigenschap heeft uw hond ?</p>
+                <div class="characteristics">
+                    <div>
+                        <input class="input" type="text" placeholder="search for characteristique">
+                    </div>
+                    <div class="buttons w-100">
+                        <button class="btn btn-element">Playful</button>
+                        <button class="btn btn-element">Brave</button>
+                        <button class="btn btn-element">Loyal</button>
+                    </div>
+                    <div class="buttons w-100">
+                        <button class="btn btn-element">Leader</button>
+                        <button class="btn btn-element">Courageous</button>
+                        <button class="btn btn-element">Selfish</button>
+                    </div>
+                    <div class="buttons w-100">
+                        <button class="btn btn-element">Friendly</button>
+                        <button class="btn btn-element">Affectionate</button>
+                        <button class="btn btn-element">Jealousy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-previous">
+                    <i class="fas fa-undo"></i>
+                </button>
+                <button class="btn-skip">
+                    skip
+                </button>
+            </div>
+        </div>
+        <div id="step4" class="step">
+            <div class="subcontainer flex-row">
+                <div id="bestfit">
+                    <h1>Meest passende hond:</h1>
+                    <img id="breed-img" src="g" width="200px" height="200px" alt="foto van een hond">
+                    <div class="hond-info">
+                        <h4 id="breed-name"></h4>
+                        <p id="breed-info"></p>
+                    </div>
+                </div>
+                <div id="buttons-best-fit">
+                    <button class="btn"><i class="fas fa-save"></i></button>
+                    <button class="btn btn-previous"><i class="fas fa-undo"></i></button>
+                </div>
+            </div>
+            <div class="scrollbar subcontainer">
+                <div id="content">
+                    <h1>Nog meer honden:</h1>
+                    <div id="other">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="error" class="error-div">
+            <p>Geen honden gevonden voor deze filter, probeer iets anders</p>
+            <button class="btn btn-previous"><i class="fas fa-undo"></i></button>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>DAGGOE</p>
+    </footer>
+    <script src="modal.js"></script>
+    <script src="pages.js"></script>
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
