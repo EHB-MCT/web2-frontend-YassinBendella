@@ -3,6 +3,10 @@
     src: url("./fonts/PoorRichardOpti.otf");
 }
 
+p,h1,label,h2,h3,h4,h5,h6 {
+    color: white;
+}
+
 html{
     font-family: "richard", serif;
 }
@@ -15,6 +19,7 @@ html{
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    background-image: url("./background_site.jpg");
 }
 
 .step{
@@ -24,10 +29,9 @@ html{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10vh;
 }
 
-#step4{
+#step5{
     width: 75%;
     height: 100%;
     flex-direction: row;
@@ -72,9 +76,9 @@ html{
 }
 
 .scrollbar::-webkit-scrollbar-track{
-    background: #fff;
-    border-left: 5px solid #ddd;
-    border-right: 5px solid #ddd;
+    background: transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
 }
 
 .scrollbar::-webkit-scrollbar-thumb{
@@ -114,6 +118,14 @@ html{
     gap: 1vw;
 }
 
+.buttons-page{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    gap: 1vw;
+}
+
 .w-100{
     width: 100%;
 }
@@ -128,28 +140,29 @@ html{
 
 button:hover{
     cursor: pointer;
-    background-color: #000;
+    background-color: #aaa;
     color: #fff;
     transition: 250ms;
 }
 
-.btn-skip{
+.btn-skip, .btn-my-list, .btn-home{
     border: none;
     outline: none;
     background-color: transparent;
     margin: 1vh;
     font-size: large;
+    color: white;
 }
 
-.btn-skip:hover{
+.btn-skip:hover, .btn-my-list:hover,.btn-home:hover{
     font-size: x-large;
     transition: 150ms ease-in-out;
     background-color: transparent;
-    color: #000;
+    color: #fff;
 }
 
 .btn-active{
-    background-color: #000;
+    background-color: #aaa;
     color: #fff;
 }
 
@@ -188,6 +201,7 @@ button:hover{
 
 .footer > p{
     font-size: xx-large;
+    color: black;
 }
 
 
@@ -205,7 +219,7 @@ button:hover{
 
 #modal-content{
     background-color: #fff;
-    width: 25%;
+    width: 35%;
     position: relative;
     margin: 20vh auto;
     padding: 20px;
@@ -215,6 +229,34 @@ button:hover{
     display: flex;
     flex-direction: column;
 }
+
+#saveInfo{
+    margin: 0 1vh;
+}
+
+#saveInfo > div{
+    margin: 1vh 0;
+}
+
+#saveInfo input{
+    background-color: #fff;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+.justify-content-center{
+    justify-content: center;
+}
+
 #modal-close {
     color: #aaa;
     float: right;
@@ -240,7 +282,28 @@ button:hover{
   cursor: pointer;
 }
 
+#modal-body p {
+    color:#000;
+}
+
 @keyframes animatetop {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
+}
+
+#my-list{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    padding: 1vw;
+    flex-direction: column;
+}
+
+#dogs{
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw    ;
 }

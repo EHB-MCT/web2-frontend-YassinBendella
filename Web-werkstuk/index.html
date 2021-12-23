@@ -19,12 +19,25 @@
                 <div id="modal-body">
     
                 </div>
-                <button class="btn"><i class="fas fa-save"></i></button>
+                <div id="saveInfo">
+                    <div>
+                        <label for="dogName">Name of your dog</label>
+                        <input class="input" id="dogName" type="text">
+                    </div>
+                    <button id="btn-save-modal" class="btn"><i class="fas fa-save"></i></button>
+                </div>
             </div>
         </div>
     </div>
     <div id="main" class="container">
         <div id="step1" class="step">
+            <div class="flex flex-column">
+                <label for="naam">What is your name ?</label>
+                <input class="input" type="text" id="naam">
+            </div>
+            <button class="btn btn-element">Submit</button>
+        </div>
+        <div id="step2" class="step">
             <div>
                 <p>Welke grootte hond verkiest u ?</p>
                 <div class="buttons">
@@ -33,11 +46,19 @@
                     <button class="btn btn-element">Large</button>
                 </div>
             </div>
-            <button class="btn-skip">
-                skip
-            </button>
+            <div class="buttons-page">
+                <button class="btn btn-previous">
+                    <i class="fas fa-undo"></i>
+                </button>
+                <button class="btn-skip">
+                    skip
+                </button>
+                <button class="btn-my-list">
+                    my list
+                </button>
+            </div>
         </div>
-        <div id="step2" class="step">
+        <div id="step3" class="step">
             <div>
                 <p>Wat voor eerste eigenschap heeft uw hond ?</p>
                 <div class="characteristics">
@@ -61,16 +82,19 @@
                     </div>
                 </div>
             </div>
-            <div class="buttons">
+            <div class="buttons-page">
                 <button class="btn btn-previous">
                     <i class="fas fa-undo"></i>
                 </button>
                 <button class="btn-skip">
                     skip
                 </button>
+                <button class="btn-my-list">
+                    my list
+                </button>
             </div>
         </div>
-        <div id="step3" class="step">
+        <div id="step4" class="step">
             <div>
                 <p>Wat voor tweede eigenschap heeft uw hond ?</p>
                 <div class="characteristics">
@@ -94,28 +118,32 @@
                     </div>
                 </div>
             </div>
-            <div class="buttons">
+            <div class="buttons-page">
                 <button class="btn btn-previous">
                     <i class="fas fa-undo"></i>
                 </button>
                 <button class="btn-skip">
                     skip
                 </button>
+                <button class="btn-my-list">
+                    my list
+                </button>
             </div>
         </div>
-        <div id="step4" class="step">
+        <div id="step5" class="step">
             <div class="subcontainer flex-row">
                 <div id="bestfit">
                     <h1>Meest passende hond:</h1>
-                    <img id="breed-img" src="g" width="200px" height="200px" alt="foto van een hond">
+                    <img id="breed-img" width="200px" height="200px" alt="foto van een hond">
                     <div class="hond-info">
                         <h4 id="breed-name"></h4>
                         <p id="breed-info"></p>
                     </div>
                 </div>
                 <div id="buttons-best-fit">
-                    <button class="btn"><i class="fas fa-save"></i></button>
+                    <button id="btn-save-best-fit" class="btn"><i class="fas fa-save"></i></button>
                     <button class="btn btn-previous"><i class="fas fa-undo"></i></button>
+                    <button class="btn-my-list">my list</button>
                 </div>
             </div>
             <div class="scrollbar subcontainer">
@@ -125,6 +153,14 @@
     
                     </div>
                 </div>
+            </div>
+        </div>
+        <div id="my-list">
+            <div id="dogs">
+
+            </div>
+            <div class="flex justify-content-center">
+                <button class="btn-home">Home</button>
             </div>
         </div>
         <div id="error" class="error-div">

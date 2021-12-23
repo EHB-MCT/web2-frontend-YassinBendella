@@ -14,4 +14,8 @@ function setModalContent(content){
 
 function clearModalContent(){
     document.getElementById("modal-body").innerHTML = ""
+    let deleteButton = document.getElementById("btn-delete-modal")
+    if (deleteButton != undefined){
+        document.getElementById("saveInfo").removeChild(deleteButton)
+    } 
 }

@@ -39,3 +39,44 @@ function disableActiveButtons(){
         currentPage.querySelectorAll(".btn").forEach(e => e.classList.remove("btn-active"))
     }
 }
+
+function homePage(){
+    let currentPage = document.getElementById("my-list")
+    currentPage.style.display = "none"
+    currentPageIndex = 1
+    let homepage = document.getElementById(`step${currentPageIndex}`)
+    homepage.style.display = "flex"
+}
+
+function myListPage(){
+    let currentId = `step${currentPageIndex}`
+    let currentPage = document.getElementById(currentId)
+    currentPage.style.display = "none"
+    this.currentPageIndex = -1
+    let myListPage = document.getElementById("my-list")
+    myListPage.style.display = "flex"
+}
+
+function isNamePage(){
+    return currentPageIndex == 1
+}
+
+function isSizePage(){
+    return currentPageIndex == 2
+}
+
+function isFirstCharacterPage(){
+    return currentPageIndex == 3;
+}
+
+function isSecondCharacterPage(){
+    return currentPageIndex == 4;
+}
+
+function isCharacterPage(){
+    return isFirstCharacterPage() || isSecondCharacterPage()
+}
+
+function isFinalPage(){
+    return currentPageIndex == 5
+}
