@@ -1,21 +1,14 @@
+import axios from "axios";
+
 const baseUrl = 'https://api.thedogapi.com/v1'
 
-async function sendRequest(url, type, headers){
-    let response = await fetch(url,
-        {
-            method: type,
-            headers
-        })
-    let result = await response.json()
-    return result;
-}
-
 async function getBreeds(){
-    const breeds = await sendRequest(`${baseUrl}/breeds`,"GET",
-        {
+    const breeds = await axios.get(`${baseUrl}/breeds`, {
+        headers: {
             'x-api-key': '12f0f4b9-66c7-4802-b2a0-8cf9f5a13bc5' 
-        });
-    return breeds;
+        }
+    });
+    return breeds.data;
 }
 
 async function getCategories(){
@@ -77,7 +70,6 @@ const sizes = {
 };
 
 export {
-    sendRequest,
     getCategories,
     getMatchingBreeds
 }
