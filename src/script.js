@@ -1,6 +1,8 @@
 import { getMatchingBreeds, getCategories } from './api.js';
 import { insertDog } from './backend.js';
 import { createBotMessage, createUserMessage, createBotResponses, clearMessages } from './html.js'
+import Modal from 'modal-vanilla'
+
 
 const sendButton = document.getElementById('send');
 const inputField = document.getElementById('input-field');
@@ -88,6 +90,12 @@ function showMatchingBreeds(breeds,username){
     async function addDog(dogname,breed){
         breed.dogName = dogname;
         await insertDog(breed,username);
+        var myModal = new Modal({
+            el: document.getElementById('my-modal')
+        });
+        var dogInfo = document.getElementById('dog-info-modal');
+        dogInfo.innerText = `You have successfully saved ${dogname} - ${breed.name}`
+        myModal.show()
     }
 }
 
