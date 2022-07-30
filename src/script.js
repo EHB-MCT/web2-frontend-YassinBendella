@@ -88,13 +88,17 @@ function showMatchingBreeds(breeds,username){
     }
 
     async function addDog(dogname,breed){
-        breed.dogName = dogname;
-        await insertDog(breed,username);
         var myModal = new Modal({
             el: document.getElementById('my-modal')
         });
         var dogInfo = document.getElementById('dog-info-modal');
-        dogInfo.innerText = `You have successfully saved ${dogname} - ${breed.name}`
+        try{
+            breed.dogName = dogname;
+            await insertDog(breed,username);
+            dogInfo.innerText = `You have successfully saved ${dogname} - ${breed.name}`
+        }catch(err){
+            dogInfo.innerText = "There was an error saving this dog, perhaps you didn't give it a name ?"
+        }
         myModal.show()
     }
 }
