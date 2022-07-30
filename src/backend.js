@@ -8,10 +8,14 @@ async function getDogs(username){
 }
 
 async function insertDog(dog, username){
-    const insertRequets = await axios.post(`${baseUrl}/api/insert`,{
-        dog,username
-    });
-    return insertRequets;
+    try{
+        const insertRequets = await axios.post(`${baseUrl}/api/insert`,{
+            dog,username
+        });
+        return insertRequets;
+    }catch(err){
+        throw err;
+    }
 }
 
 async function updateDog(dog,oldname,username){
