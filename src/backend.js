@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = 'https://daggoe.herokuapp.com/'
+const baseUrl = 'https://daggoe.herokuapp.com'
 
 async function getDogs(username){
     const dogs = await axios.get(`${baseUrl}/api/dogs/${username}`);
